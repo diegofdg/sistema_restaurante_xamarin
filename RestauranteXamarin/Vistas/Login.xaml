@@ -20,9 +20,14 @@
                 FontSize="25"
                 FontAttributes="Bold"
              />
-            <FlexLayout Grid.Row="1" x:Name="PanelUsuarios">
-
-            </FlexLayout>
+            <ScrollView Grid.Row="1" Orientation="Vertical" >
+                <FlexLayout 
+                    Grid.Row="1" x:Name="PanelUsuarios"
+                    JustifyContent="SpaceAround"
+                    Wrap="Wrap"
+                >
+                </FlexLayout>
+            </ScrollView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
