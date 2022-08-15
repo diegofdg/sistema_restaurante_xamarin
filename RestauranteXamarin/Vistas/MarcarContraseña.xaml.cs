@@ -115,7 +115,7 @@ namespace RestauranteXamarin.Vistas
             funcion.validarUsuario(parametros, ref idusuario);
             if (idusuario > 0)
             {
-                ((NavigationPage)this.Parent).PushAsync(new Ventas());
+                ((NavigationPage)this.Parent).PushAsync(new Mesas());
             }
         }
     }
