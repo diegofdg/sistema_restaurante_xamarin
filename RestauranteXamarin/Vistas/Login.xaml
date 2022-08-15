@@ -11,21 +11,19 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label 
-                Grid.Row="0"
+            <Label Grid.Row="0"
                 Text="¿Quien esta Iniciando Sesion?" 
-                TextColor="White"
-                HorizontalOptions="Center" 
-                VerticalOptions="Center"
-                FontSize="25"
-                FontAttributes="Bold"
-             />
+                   TextColor="White"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"
+                   FontSize="25"
+                   FontAttributes="Bold" />
             <ScrollView Grid.Row="1" Orientation="Vertical" >
-                <FlexLayout 
-                    Grid.Row="1" x:Name="PanelUsuarios"
-                    JustifyContent="SpaceAround"
-                    Wrap="Wrap"
-                >
+                <FlexLayout Grid.Row="1" x:Name="PanelUsuarios"
+                        JustifyContent="SpaceAround"
+                        Wrap="Wrap"
+                              >
+
                 </FlexLayout>
             </ScrollView>
         </Grid>

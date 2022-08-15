@@ -20,6 +20,7 @@ namespace RestauranteXamarin.Vistas
             InitializeComponent();
             dibujarUsuarios();
         }
+        public string login;
         public void dibujarUsuarios()
         {
             DataTable dt = new DataTable();
@@ -49,6 +50,7 @@ namespace RestauranteXamarin.Vistas
                 pt.Source = ImageSource.FromStream(() => ms);
                 pt.HeightRequest = 140;
                 pt.WidthRequest = 140;
+                pt.CommandParameter = rdr["Login"].ToString();
 
                 Frame frameImagenButton = new Frame();
                 frameImagenButton.Content = pt;
@@ -81,7 +83,15 @@ namespace RestauranteXamarin.Vistas
                 frameStackLayout.BackgroundColor = p.BackgroundColor;
 
                 PanelUsuarios.Children.Add(frameStackLayout);
+                pt.Clicked += Pt_Clicked;
             }
+        }
+
+        private void Pt_Clicked(object sender, EventArgs e)
+        {
+            login = ((ImageButton)sender).CommandParameter.ToString();
+            MarcarContraseña.login = login;
+            ((NavigationPage)this.Parent).PushAsync(new MarcarContraseña());
         }
     }
 }
